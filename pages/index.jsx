@@ -147,9 +147,42 @@ export default function Home({albums}) {
         <div>
             <Head>
               <title>{hero.title}</title>
-              <meta name="description" content="Vannitubade, WC plaatimistööd,Sanitaartehnika paigaldus,Kodumasinate transport ja paigaldus,Tarbeveetorustiku paigaldamine,Elektritööd vannitoas,Väiksemad üldehitustööd" />
+              <meta name="description" content="DKL Grupp OÜ — vannitubade ehitus- ja remonditööd Viljandis ja Viljandimaal. Plaatimine, sanitaartehnika, torustik, kodumasinate paigaldus. 25+ aastat kogemust." />
               <link rel="icon" href="/favicon.ico" />
               <link rel="canonical" href="https://www.vannitubailusaks.ee/" />
+              {/* Open Graph */}
+              <meta property="og:type" content="website" />
+              <meta property="og:locale" content="et_EE" />
+              <meta property="og:url" content="https://www.vannitubailusaks.ee/" />
+              <meta property="og:title" content="DKL Grupp OÜ — Vannitubade ehitus Viljandis" />
+              <meta property="og:description" content="Professionaalsed vannitubade ehitus- ja remonditööd Viljandis ja Viljandimaal. 25+ aastat kogemust." />
+              <meta property="og:image" content="https://www.vannitubailusaks.ee/img/FotoJet.webp" />
+              <meta property="og:site_name" content="DKL Grupp OÜ" />
+              {/* Twitter */}
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:title" content="DKL Grupp OÜ — Vannitubade ehitus Viljandis" />
+              <meta name="twitter:description" content="Professionaalsed vannitubade ehitus- ja remonditööd Viljandis ja Viljandimaal." />
+              <meta name="twitter:image" content="https://www.vannitubailusaks.ee/img/FotoJet.webp" />
+              {/* JSON-LD */}
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "DKL Grupp OÜ",
+                "description": "Vannitubade ehitus- ja remonditööd Viljandis ja Viljandimaal",
+                "url": "https://www.vannitubailusaks.ee",
+                "telephone": "+37258047111",
+                "email": "kaidolink333@gmail.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Pärna Vastemõisa",
+                  "addressLocality": "Viljandi maakond",
+                  "postalCode": "71301",
+                  "addressCountry": "EE"
+                },
+                "areaServed": "Viljandi maakond",
+                "priceRange": "€€",
+                "image": "https://www.vannitubailusaks.ee/img/FotoJet.webp"
+              })}} />
             </Head>
             <Header />
             {/* Hero — 2 column */}

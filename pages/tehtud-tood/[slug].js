@@ -16,15 +16,28 @@ export default function Home({ album: albumData }) {
     .map(({ url, alt, name }) => ({ src: url, alt, name }))
     .sort((a, b) => +b.name.replace(/\D/g, "") - +a.name.replace(/\D/g, ""));
 
-  const { asukoht, ehitusaeg } = albumData;
+  const { asukoht, ehitusaeg, slug } = albumData;
+  const pageTitle = `${stripHtml(asukoht) || 'Tehtud tööd'} | DKL Grupp OÜ`;
+  const pageUrl = `https://www.vannitubailusaks.ee/tehtud-tood/${slug}`;
+  const ogImage = photos.length > 0 ? `https://www.vannitubailusaks.ee${photos[0].src}` : '';
 
   return (
     <div style={{background:'linear-gradient(135deg, #0f1923 0%, #1a2e42 45%, #1d6b87 100%)', minHeight:'100vh'}}>
       <Head>
-        <title>Tehtud tööd</title>
-        <meta name="description" content="Pildid tehtud töödest" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={`${stripHtml(asukoht)} — tehtud tööd DKL Grupp OÜ poolt. ${photos.length} pilti.`} />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://www.vannitubailusaks.ee/tehtud-tood" />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="et_EE" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={`${stripHtml(asukoht)} — tehtud tööd DKL Grupp OÜ poolt.`} />
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        <meta property="og:site_name" content="DKL Grupp OÜ" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        {ogImage && <meta name="twitter:image" content={ogImage} />}
       </Head>
       <Header />
 
