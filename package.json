@@ -1,0 +1,44 @@
+{
+  "name": "vannitubailusaks",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-react": "^7.16.7",
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
+    "dotenv": "^16.0.0",
+    "frontmatter-markdown-loader": "^3.6.3",
+    "gray-matter": "^4.0.3",
+    "js-cookie": "^3.0.1",
+    "next": "12.1.4",
+    "nodemailer": "^6.7.3",
+    "npm": "^8.7.0",
+    "nprogress": "^0.2.0",
+    "react": "^18.2.0",
+    "react-bnb-gallery": "^1.4.4",
+    "react-dom": "^18.2.0",
+    "react-grid-gallery": "^1.0.0",
+    "react-image-lightbox": "^5.1.4",
+    "react-images-viewer": "^1.7.1",
+    "react-modal": "^3.15.1",
+    "react-photo-album": "^1.16.1",
+    "react-responsive-carousel": "^3.2.23",
+    "sitemap": "^7.1.1",
+    "swiper": "^8.4.7",
+    "yet-another-react-lightbox": "^3.16.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24"
+  }
+}

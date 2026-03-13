@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.carousel .slide .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.pickgradient {
+    display:inline-block;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgb(59 59 59 / 74%) 0%)
+  }
+  
+  img{
+    position:relative;
+    z-index:-1;
+    display:block;
+  }
+
+  .pswp__custom-caption {
+    background: rgba(75, 150, 75, 0.75);
+    font-size: 16px;
+    color: #fff;
+    width: calc(100% - 32px);
+    max-width: 400px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+  }
+  .pswp__custom-caption a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .hidden-caption-content {
+    display: none;
+  }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #0f1923;
+}
+
+
+
+.gallery-figcaption--thumbnails {
+  max-width: 95% !important;
+  margin: 0 auto
+}
+
+.gallery-thumbnails--toggle {
+  display: none !important;
+}
+
+.gallery-figcaption {
+  max-width: 80% !important;
+  margin: 0 auto
+}
+
+.gallery-figcaption--info {
+  max-width: 95% !important;
+  margin: 0 auto;
+  padding: 0 !important;
+}
