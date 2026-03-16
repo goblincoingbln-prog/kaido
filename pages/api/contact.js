@@ -8,7 +8,7 @@ export default async (req, res) => {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: 'vannitubailusaks@gmail.com',
+      user: 'kaidolink333@gmail.com',
       pass: process.env.PASSWORD,
     },
     secure: true,
@@ -29,7 +29,7 @@ export default async (req, res) => {
 });
 
   const mailData = {
-    from: 'vannitubailusaks@gmail.com',
+    from: 'kaidolink333@gmail.com',
     to: 'kaidolink333@gmail.com',
     replyTo: req.body.email,
     subject: `Message From ${req.body.name}`,
