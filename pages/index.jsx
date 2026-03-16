@@ -375,7 +375,6 @@ export default function Home({albums}) {
                     </div>
                   </div>
                   <div className="p-6 pt-2">
-                    <p className="text-yellow-400 font-bold tracking-widest text-xs uppercase mb-1">Suurim projekt</p>
                     <h3 className="text-2xl font-extrabold text-white mb-1">Kanaküla Coop</h3>
                     <p className="text-blue-200 text-sm mb-4">Täielik kaupluse siseehitus ja viimistlus</p>
                     <div className="flex items-center gap-4 mb-4">
