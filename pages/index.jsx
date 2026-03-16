@@ -94,11 +94,12 @@ export default function Home({albums}) {
   const coopSlides = coopImages.map(src => ({ src }))
 
   useEffect(() => {
+    if (coopLightbox >= 0) return
     const timer = setInterval(() => {
       setCoopIndex(prev => (prev + 1) % coopImages.length)
     }, 3000)
     return () => clearInterval(timer)
-  }, [])
+  }, [coopLightbox])
 
   const [sendMessage, toggleSendMessage] = useState(false)
   const [name, setName] = useState("")
@@ -406,6 +407,7 @@ export default function Home({albums}) {
                 plugins={[Zoom]}
                 zoom={{ maxZoomPixelRatio: 10, scrollToZoom: true }}
                 close={() => setCoopLightbox(-1)}
+                on={{ view: ({ index }) => setCoopLightbox(index) }}
               />
             </section>
 
@@ -450,7 +452,7 @@ export default function Home({albums}) {
                 <div className="lg:w-[440px] flex-shrink-0 flex items-end justify-center overflow-hidden min-h-[380px] relative" style={{background:'radial-gradient(ellipse 90% 80% at 50% 58%, #d0e4ee 0%, #8ab4c8 25%, #3a6070 60%, #1a2e42 100%)'}}>
                   <span className="absolute bottom-0 right-2 text-[260px] font-extrabold leading-none select-none pointer-events-none" style={{color:'rgba(255,255,255,0.04)'}}>K</span>
                   <img
-                    src="/img/kaido.png"
+                    src="/img/kaido.webp"
                     alt="Kaido"
                     className="w-full object-contain relative z-[1]"
                   />
