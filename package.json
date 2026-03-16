@@ -19,7 +19,6 @@
     "js-cookie": "^3.0.1",
     "next": "12.1.4",
     "nodemailer": "^6.7.3",
-    "npm": "^8.7.0",
     "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-bnb-gallery": "^1.4.4",
